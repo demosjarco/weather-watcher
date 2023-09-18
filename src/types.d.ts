@@ -1,4 +1,4 @@
-export type Bindings = Record<string, any> & {
+export interface Bindings extends Record<string, any> {
 	GIT_HASH?: string;
 	NODE_ENV: string;
 
@@ -6,4 +6,4 @@ export type Bindings = Record<string, any> & {
 
 	HISTORICAL_WEATHER_COMFORT?: AnalyticsEngineDataset;
 	DISCORD_WEATHER_WATCHER_INFO: D1Database;
-};
+}
