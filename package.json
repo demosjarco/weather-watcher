@@ -1,0 +1,28 @@
+{
+	"type": "module",
+	"scripts": {
+		"format": "prettier --check .",
+		"format:fix": "prettier --write .",
+		"start": "wrangler dev --local-protocol https --ip localhost --port 8788 --test-scheduled"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/demosjarco/discord-weather-watcher.git"
+	},
+	"author": "DemosJarco",
+	"license": "UNLICENSED",
+	"private": true,
+	"bugs": {
+		"url": "https://github.com/demosjarco/discord-weather-watcher/issues"
+	},
+	"homepage": "https://github.com/demosjarco/discord-weather-watcher#readme",
+	"prettier": "@demosjarco/prettier-config",
+	"dependencies": {
+		"hono": "^3.6.3"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230914.0",
+		"@demosjarco/prettier-config": "^1.0.0",
+		"wrangler": "^3.8.0"
+	}
+}
