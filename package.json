@@ -5,6 +5,12 @@
 		"format": "prettier --check .",
 		"format:fix": "prettier --write .",
 		"start": "wrangler dev --local-protocol https --ip localhost --port 8788 --test-scheduled"
+		"db": "npm run db:cloud -- --local",
+		"db:cloud": "npx wrangler d1 execute discord-weather-watcher --file migrations/0000_initial.sql",
+		"db:cloud:preview": "npm run db:cloud -- --preview",
+		"db:migrations": "npm run db:migrations:cloud -- --local",
+		"db:migrations:cloud": "npx wrangler d1 migrations apply discord-weather-watcher",
+		"db:migrations:cloud:preview": "npm run db:migrations:cloud -- --preview",
 	},
 	"repository": {
 		"type": "git",
