@@ -1,0 +1,21 @@
+name = "discord-weather-watcher"
+main = "src/index.ts"
+compatibility_date = "2023-09-04"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+# route = { pattern = "discord-weather-watcher.demosjarco.dev", custom_domain = true }
+usage_model = "bundled"
+minify = true
+analytics_engine_datasets = [
+	{ binding = "HISTORICAL_WEATHER_COMFORT", dataset = "HISTORICAL_WEATHER_COMFORT" },
+]
+d1_databases = [
+	{ binding = "DISCORD_WEATHER_WATCHER_INFO", database_name = "discord-weather-watcher", database_id = "2db3f58a-43d8-44ad-84cb-00cfad1c48c8", preview_database_id = "737ede82-4710-4de7-ba99-11d33fa49a22" },
+]
+
+[vars]
+NODE_ENV = "development"
+
+# Every 29 minutes = 12 hours * 60 minutes = 1440 minutes / 50 api calls (free tier) = 28.8 minutes
+[triggers]
+crons = ["*/29 * * * *"]
