@@ -1,4 +1,4 @@
-export interface geoPositionSearch {
+export interface geoPositionSearchJsonResult {
 	Version: number;
 	Key: string;
 	Type: string;
