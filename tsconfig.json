@@ -93,5 +93,16 @@
 		/* Completeness */
 		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"allowImportingTsExtensions": true,
+			"module": "NodeNext",
+			"moduleResolution": "NodeNext",
+			"types": [
+				"node"
+			]
+		},
+		"esm": true,
 	}
 }

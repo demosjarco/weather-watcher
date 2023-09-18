@@ -1,6 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
+		"email:generate": "node --loader ts-node/esm emailGenerate.ts",
 		"format": "prettier --check .",
 		"format:fix": "prettier --write .",
 		"start": "wrangler dev --local-protocol https --ip localhost --port 8788 --test-scheduled"
@@ -24,7 +25,10 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230914.0",
 		"@demosjarco/prettier-config": "^1.0.0",
+		"@types/node": "^20.6.2",
 		"discord-api-types": "^0.37.56",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2",
 		"wrangler": "^3.8.0"
 	}
 }
