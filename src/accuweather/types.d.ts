@@ -94,3 +94,84 @@ export interface geoPositionSearchJsonResult {
 		LocationStem: string;
 	};
 }
+
+interface TemperatureDetails {
+	Value: number | null;
+	Unit: string;
+	UnitType: number;
+}
+
+interface MeasurementDetails {
+	Metric: TemperatureDetails;
+	Imperial: TemperatureDetails;
+}
+
+interface TemperatureSummaryRange {
+	Minimum: MeasurementDetails;
+	Maximum: MeasurementDetails;
+}
+
+export interface currentWeatherConditionsJsonResult {
+	LocalObservationDateTime: string;
+	EpochTime: number;
+	WeatherText: string;
+	WeatherIcon?: number | null;
+	LocalSource?: {
+		Id?: number;
+		Name?: string;
+		WeatherCode?: string;
+	};
+	IsDayTime: boolean;
+	Temperature: MeasurementDetails;
+	RealFeelTemperature: MeasurementDetails;
+	RealFeelTemperatureShade: MeasurementDetails;
+	RelativeHumidity?: number | null;
+	DewPoint: object;
+	Wind: {
+		Direction: {
+			Degrees?: number | null;
+			English: string;
+			Localized: string;
+		};
+		Speed: MeasurementDetails;
+	};
+	WindGust: {
+		Speed: MeasurementDetails;
+	};
+	UVIndex?: number | null;
+	UVIndexText: string;
+	Visibility: object;
+	ObstructionsToVisibility: string;
+	CloudCover?: number | null;
+	Ceiling: object;
+	Pressure: object;
+	PressureTendency: {
+		LocalizedText: string;
+		Code: string;
+	};
+	Past24HourTemperatureDeparture: object;
+	ApparentTemperature: object;
+	WindChillTemperature: object;
+	WetBulbTemperature: object;
+	Precip1hr: object;
+	PrecipitationSummary: {
+		Precipitation?: object;
+		PastHour: MeasurementDetails;
+		Past3Hours: MeasurementDetails;
+		Past6Hours: MeasurementDetails;
+		Past9Hours: MeasurementDetails;
+		Past12Hours: MeasurementDetails;
+		Past18Hours: MeasurementDetails;
+		Past24Hours: MeasurementDetails;
+	};
+	TemperatureSummary: {
+		Past6HourRange: TemperatureSummaryRange;
+		Past12HourRange: TemperatureSummaryRange;
+		Past24HourRange: TemperatureSummaryRange;
+	};
+	MobileLink: string;
+	Link: string;
+	HasPrecipitation: boolean;
+	PrecipitationType?: string | null;
+	IndoorRelativeHumidity: boolean;
+}
