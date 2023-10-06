@@ -1,6 +1,6 @@
 name = "discord-weather-watcher"
 main = "src/index.ts"
-compatibility_date = "2023-09-04"
+compatibility_date = "2023-10-02"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = false
 # route = { pattern = "discord-weather-watcher.demosjarco.dev", custom_domain = true }
