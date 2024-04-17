@@ -10,9 +10,6 @@ updates:
     schedule:
       interval: 'daily'
     open-pull-requests-limit: 999
-    ignore:
-      - dependency-name: 'step-security/harden-runner'
-        versions: '>= 2'
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
