@@ -29,7 +29,6 @@ updates:
         patterns:
           - '@types/*'
           - '@cloudflare/workers-types'
-          - 'ts-node'
           - 'typescript'
       code-management:
         patterns:
