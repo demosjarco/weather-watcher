@@ -23,9 +23,6 @@
 	},
 	"homepage": "https://github.com/demosjarco/discord-weather-watcher#readme",
 	"prettier": "@demosjarco/prettier-config",
-	"dependencies": {
-		"discord-interactions": "^3.4.0"
-	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20240405.0",
 		"@demosjarco/prettier-config": "^1.0.1",
