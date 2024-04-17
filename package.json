@@ -1,7 +1,6 @@
 {
 	"type": "module",
 	"scripts": {
-		"email:generate": "node --loader ts-node/esm emailGenerate.ts",
 		"format": "prettier --check .",
 		"format:fix": "prettier --write .",
 		"db": "npm run db:cloud -- --local",
@@ -34,7 +33,6 @@
 		"@types/node": "^20.6.2",
 		"discord-api-types": "^0.37.56",
 		"prettier": "^3.0.3",
-		"ts-node": "^10.9.1",
 		"typescript": "^5.2.2",
 		"wrangler": "^3.8.0"
 	}
